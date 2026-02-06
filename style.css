@@ -1303,3 +1303,53 @@ body.light-mode .hero::after {
 .mt-20 {
     margin-top: 20px;
 }
+
+/* Mobile-specific fixes */
+@media (max-width: 768px) {
+  /* Fix profile image container */
+  .profile-image-container {
+    margin-top: 2rem; /* Add space at top */
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Ensure circular image isn't cut off */
+  .profile-image {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  /* Center text content */
+  .intro-section {
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+  
+  .intro-section h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .name-title {
+    margin-bottom: 1rem;
+  }
+  
+  /* Fix description text */
+  .description {
+    padding: 0 1.5rem;
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+  /* Button positioning */
+  .cta-button {
+    margin: 2rem auto;
+    display: block;
+  }
+}
