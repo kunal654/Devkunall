@@ -1304,52 +1304,72 @@ body.light-mode .hero::after {
     margin-top: 20px;
 }
 
-/* Mobile-specific fixes */
+/* Mobile-specific centering fixes */
 @media (max-width: 768px) {
-  /* Fix profile image container */
+  
+  /* Center the entire hero/intro section */
+  .hero-section,
+  .intro-section,
+  .portfolio-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  /* Profile image - perfectly centered */
   .profile-image-container {
-    margin-top: 2rem; /* Add space at top */
-    padding: 1rem 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 2rem auto;
   }
   
-  /* Ensure circular image isn't cut off */
   .profile-image {
     width: 280px;
     height: 280px;
     border-radius: 50%;
     object-fit: cover;
     margin: 0 auto;
+  }
+  
+  /* Center all text elements */
+  .intro-section h2,
+  .intro-section h1,
+  .name-title,
+  .subtitle,
+  .description,
+  .intro-section p {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100%;
+  }
+  
+  /* Center the name "Kunal" */
+  .name-title,
+  h1 {
     display: block;
-  }
-  
-  /* Center text content */
-  .intro-section {
     text-align: center;
-    padding: 1.5rem 1rem;
+    width: 100%;
   }
   
-  .intro-section h2 {
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .name-title {
-    margin-bottom: 1rem;
-  }
-  
-  /* Fix description text */
+  /* Center description text */
   .description {
-    padding: 0 1.5rem;
-    line-height: 1.6;
+    max-width: 90%;
+    margin: 1rem auto;
+    padding: 0 1rem;
     text-align: center;
   }
   
-  /* Button positioning */
-  .cta-button {
-    margin: 2rem auto;
+  /* Center button */
+  .cta-button,
+  button {
     display: block;
+    margin: 2rem auto;
+    text-align: center;
   }
 }
